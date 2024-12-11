@@ -1,0 +1,46 @@
+<!-- HTML --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Snap - Post Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Social Snap</h1>
+        <p>Find and manage your posts with ease</p>
+    </header>
+    <main>
+        <section id="user-input">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button id="load-posts">Load Posts</button>
+        </section>
+        <section id="user-posts" class="hidden">
+            <h2>Your Posts</h2>
+            <div class="post-list" id="post-list"></div>
+        </section>
+    </main>
+
+    <div id="update-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-update-modal" class="close">&times;</span>
+            <h3>Edit Post</h3>
+            <form id="update-form">
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" required>
+                <label for="post-body">Content</label>
+                <textarea id="post-body" rows="4" required></textarea>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by JSONPlaceholder</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
